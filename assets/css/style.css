@@ -3,3 +3,108 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body{
+    background-color: #dbdbd3;
+}
+
+/* Nav Style */
+
+nav{
+    position: relative;
+    min-height: 150px;
+    background-color: #009688;
+}
+
+/* MAIN BOX */
+.mainBox{
+    width: 80%;
+    margin: 0 auto;
+    height: 850px;
+    position: absolute;
+    top: 3%;
+    left: 11%;
+    border-radius: 10px;
+}
+
+/* LEFT & RIGHT SIDE */
+
+.leftSide{
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    background-color: #eaeaea;
+}
+
+.rightSide{
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    right: 0;
+    background-color: #e5ddd5;
+}
+
+/* navUser */
+.navUser{
+    display: flex;
+    width: 100%;
+    background-color: #eaeaea;
+    padding: 7px;
+    justify-content: space-between;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+}
+
+.avatar{
+    display: flex;
+    align-items: center;
+    width: 13%;
+}
+
+.avatar img{
+    border-radius: 50%;
+    width: 100%;
+}
+
+.icons .icon{
+    padding-left: 10px;
+}
+
+/* ACTIVE ALARM */
+.activeAlarm{
+    display: flex;
+    padding: 10px;
+    background-color: #8edafc;
+    align-items: center;
+
+}
+
+.activeAlarm div{
+    padding-right: 20px;
+}
+
+.subText{
+    text-decoration: underline;
+}
+
+/* SEARCH SECTION */
+.search{
+    padding: 10px;
+    display: flex;
+}
+
+.iconMagnif{
+    background-color: white;
+    padding: 5px;
+    padding-right: 10%;
+}
+
+.inputSearch{
+    width: 85%;
+    border: none;
+    outline: none;
+
+}

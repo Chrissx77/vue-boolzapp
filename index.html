@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <meta charset="UTF-8">
@@ -7,12 +8,55 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Boolzapp</title>
 </head>
+
 <body>
 
     <div id="app">
-        {{mess}}
+
+        <nav>
+        </nav>
+
+        <div class="mainBox">
+            <div class="content">
+                <div class="leftSide">
+                    <div class="navUser">
+                        <div class="avatar">
+                            <img src="assets/img/avatar_1.jpg" alt="">
+                            <div class="nameUser">Christian</div>
+                        </div>
+                        <div class="icons">
+                            <div class="icon">Test</div>
+                            <div class="icon">Test</div>
+                            <div class="icon">Test</div>
+                        </div>
+                    </div>
+
+                    <div class="activeAlarm">
+                        <div class="alarm">ALARM</div>
+                        <div class="text">
+                            <div class="mainText">Ricevi Notifiche di nuovi messaggi</div>
+                            <small class="subText">Attiva notifiche desktop</small>
+                        </div>
+                    </div>
+
+                    <div class="search">
+                        <span class="iconMagnif"> ICON </span>
+                        <input class="inputSearch" type="text" placeholder="Cerca o inizia una nuova chat">
+                    </div>
+
+
+                </div>
+                <div class="rightSide"></div>
+
+            </div>
+        </div>
+
+
+
+
     </div>
-    
+
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
