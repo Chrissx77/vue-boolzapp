@@ -8,6 +8,15 @@ body{
     background-color: #dbdbd3;
 }
 
+ul{
+    list-style: none;
+    overflow-y: auto;
+}
+
+li{
+    padding-bottom: 20px;
+}
+
 /* Nav Style */
 
 nav{
@@ -64,7 +73,7 @@ nav{
     width: 13%;
 }
 
-.avatar img{
+img{
     border-radius: 50%;
     width: 100%;
 }
@@ -79,7 +88,6 @@ nav{
     padding: 10px;
     background-color: #8edafc;
     align-items: center;
-
 }
 
 .activeAlarm div{
@@ -107,4 +115,29 @@ nav{
     border: none;
     outline: none;
 
+}
+
+
+/* chatList */
+
+.chatList{
+    padding: 10px;
+}
+
+.chat{
+    display: flex;
+}
+
+.itemChatAvatar{
+    flex-basis: 20%;
+}
+
+.itemChatText{
+    flex-basis: 60%;
+    padding: 10px;
+}
+
+.itemChatData{
+    flex-basis: 20%;
+    text-align: right;
 }
