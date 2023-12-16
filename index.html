@@ -71,8 +71,8 @@
 
 
                 <div class="chatList wrap">
-                    <ul> <!-- class= "wrap"  ?????????????-->
-                        <li v-for="contact in contacts">
+                    <ul>
+                        <li v-for="(contact, index) in contacts" :key="index" @click = "changeChat(index)">
                             <div class="chat">
                                 <div class="itemChatAvatar">
                                     <img v-bind:src=contact.avatar alt="" srcset="">
@@ -90,8 +90,6 @@
                         </li>
                     </ul>
                 </div>
-
-
             </div>
 
             <div class="rightSide">
@@ -121,11 +119,19 @@
                 <div class="wallpaperChat">
                     <div class="textArea">
 
-                        <div class="row">
-                            <div class="offset-6 col-6 messUser">Ciao Christian come va la vita?</div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6  messContact">Tutto bene, tu?</div>
+                        <!-- <div class="row">
+                            <div class="offset-6 messUser">
+                            </div>
+                        </div> -->
+                        <!-- <div class="row">
+                            <div class="messContact">
+                            </div>
+                        </div> -->
+
+                        <div class="row" v-for="mess in arrayMess">
+                            <div  :class="mess.status === 'sent' ? 'offset-6 messUser' : 'messContact' ">
+                                {{mess.message}}
+                            </div>
                         </div>
                     </div>
                 </div>
