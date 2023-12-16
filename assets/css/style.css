@@ -10,7 +10,6 @@ body{
 
 ul{
     list-style: none;
-    overflow-y: auto;
 }
 
 li{
@@ -20,7 +19,6 @@ li{
 /* Nav Style */
 
 nav{
-    position: relative;
     min-height: 150px;
     background-color: #009688;
 }
@@ -33,24 +31,23 @@ nav{
     position: absolute;
     top: 3%;
     left: 11%;
-    border-radius: 10px;
+    display: flex;
 }
-
-/* LEFT & RIGHT SIDE */
+/* ***************************** */
+/* LEFT SIDE */
 
 .leftSide{
-    position: absolute;
-    width: 35%;
+    width: calc(100% / 3 * 1);
     height: 100%;
     background-color: #eaeaea;
 }
 
 .rightSide{
-    position: absolute;
-    width: 65%;
+    width: calc(100% / 3 * 2);
     height: 100%;
     right: 0;
-    background-color: #e5ddd5;
+    /* background-color: #cfc8c1; */
+    border-left: 1px solid rgb(214, 214, 214);
 }
 
 /* navUser */
@@ -70,11 +67,15 @@ nav{
 .avatar{
     display: flex;
     align-items: center;
-    width: 13%;
+    width: 50px;
+}
+
+.avatar img{
+    border-radius: 50%;
 }
 
 img{
-    border-radius: 50%;
+    /* border-radius: 50%; */
     width: 100%;
 }
 
@@ -88,6 +89,7 @@ img{
     padding: 10px;
     background-color: #8edafc;
     align-items: center;
+    min-height: 70px;
 }
 
 .activeAlarm div{
@@ -130,6 +132,11 @@ img{
 
 .itemChatAvatar{
     flex-basis: 20%;
+    border-radius: 50%;
+}
+
+.itemChatAvatar img{
+    border-radius: 50%;
 }
 
 .itemChatText{
@@ -141,3 +148,95 @@ img{
     flex-basis: 20%;
     text-align: right;
 }
+
+.wrap{
+    height: 658px;
+    overflow-y: auto;
+}
+
+
+
+/* **************************
+    RIGHT SIDE */
+/* CONTACT CHAT */
+
+.contact{
+    display: flex;
+    padding: 5px;
+    background-color: #eaeaea;
+}
+
+.contactAvatar{
+    display: flex;
+    align-items: center;
+    flex-basis: 90%;
+}
+
+.infoContact{
+    padding-left: 10px;
+}
+
+.image{
+    width: 50px;
+}
+
+.image img{
+    border-radius: 50%;
+}
+
+.iconsContact{
+    display: flex;
+    align-items: center;
+}
+
+
+.iconsContact .iconContact{
+    padding-left: 10px;
+}
+
+/* SFONDO */
+.wallpaperChat{
+    height: 736px;
+    background-color: #b7b2ac;
+    /* background-image: url("/assets/img/bg_chat.png");
+    background-size: cover; */
+}
+
+/* textBar */
+
+
+.textBar {
+    min-height: 50px;
+    background-color: #f3eeea;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 5px;
+}
+
+.emoteIcon{
+    width: 10%;
+    text-align: center;
+
+}
+
+.inputTextUser{
+    width: 80%;
+
+}
+
+.inputTextUser input{
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+}
+
+.microphoneIcon{
+    width: 10%;
+    text-align: center;
+
+
+}
+
+
