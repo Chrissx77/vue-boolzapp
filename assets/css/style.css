@@ -10,10 +10,19 @@ body{
 
 ul{
     list-style: none;
+    padding-left: 0rem;
 }
 
 li{
     padding-bottom: 20px;
+}
+
+i{
+    padding: 0 5px;
+}
+
+.fa-bell-slash{
+    padding: 0;
 }
 
 /* Nav Style */
@@ -92,8 +101,14 @@ img{
     min-height: 70px;
 }
 
-.activeAlarm div{
-    padding-right: 20px;
+.alarm{
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.text{
+    padding-left: 20px;
 }
 
 .subText{
@@ -110,6 +125,7 @@ img{
     background-color: white;
     padding: 5px;
     padding-right: 10%;
+    padding-left: 5%;
 }
 
 .inputSearch{
@@ -162,7 +178,7 @@ img{
 
 .contact{
     display: flex;
-    padding: 5px;
+    padding: 7px;
     background-color: #eaeaea;
 }
 
@@ -198,9 +214,39 @@ img{
 .wallpaperChat{
     height: 736px;
     background-color: #b7b2ac;
-    /* background-image: url("/assets/img/bg_chat.png");
+    /* background-image: url("assets/img/bg_chat.png");
     background-size: cover; */
 }
+
+.textArea{
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 20px;
+    min-height: 100px;
+}
+.row{
+    width: 115%;
+}
+
+.messUser{
+    background-color: #d5f9ba;
+    width: 40%;
+    min-height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+
+}
+
+.messContact{
+    background-color: white;
+    width: 40%;
+    min-height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
 
 /* textBar */
 
@@ -209,7 +255,6 @@ img{
     min-height: 50px;
     background-color: #f3eeea;
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     padding: 5px;
 }
@@ -230,6 +275,7 @@ img{
     padding: 7px;
     border: none;
     border-radius: 5px;
+    outline: none;
 }
 
 .microphoneIcon{
