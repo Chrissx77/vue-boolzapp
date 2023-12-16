@@ -213,9 +213,8 @@ img{
 /* SFONDO */
 .wallpaperChat{
     height: 736px;
-    background-color: #b7b2ac;
-    /* background-image: url("assets/img/bg_chat.png");
-    background-size: cover; */
+    background-image: url("../img/bg_chat.png");
+    background-size: cover;
 }
 
 .textArea{
@@ -281,8 +280,6 @@ img{
 .microphoneIcon{
     width: 10%;
     text-align: center;
-
-
 }
 
 
