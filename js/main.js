@@ -212,9 +212,8 @@ createApp({
             }, "1000");
         },
 
-        removeMess(mess){
-            const index = this.arrayMess.indexOf(mess);
-            this.arrayMess.splice(index,1);
+        removeMess(i){
+            this.arrayMess.splice(i,1);
         }
 
 
