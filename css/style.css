@@ -1,39 +1,40 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #dbdbd3;
 }
 
-ul{
+ul {
     list-style: none;
     padding-left: 0rem;
 }
 
-li{
+li {
     padding-bottom: 20px;
+    cursor: pointer;
 }
 
-i{
+i {
     padding: 0 5px;
 }
 
-.fa-bell-slash{
+.fa-bell-slash {
     padding: 0;
 }
 
 /* Nav Style */
 
-nav{
+nav {
     min-height: 150px;
     background-color: #009688;
 }
 
 /* MAIN BOX */
-.mainBox{
+.mainBox {
     width: 80%;
     margin: 0 auto;
     height: 850px;
@@ -42,16 +43,17 @@ nav{
     left: 11%;
     display: flex;
 }
+
 /* ***************************** */
 /* LEFT SIDE */
 
-.leftSide{
+.leftSide {
     width: calc(100% / 3 * 1);
     height: 100%;
     background-color: #eaeaea;
 }
 
-.rightSide{
+.rightSide {
     width: calc(100% / 3 * 2);
     height: 100%;
     right: 0;
@@ -60,7 +62,7 @@ nav{
 }
 
 /* navUser */
-.navUser{
+.navUser {
     display: flex;
     width: 100%;
     background-color: #eaeaea;
@@ -68,32 +70,32 @@ nav{
     justify-content: space-between;
 }
 
-.icons{
+.icons {
     display: flex;
     align-items: center;
 }
 
-.avatar{
+.avatar {
     display: flex;
     align-items: center;
     width: 50px;
 }
 
-.avatar img{
+.avatar img {
     border-radius: 50%;
 }
 
-img{
+img {
     /* border-radius: 50%; */
     width: 100%;
 }
 
-.icons .icon{
+.icons .icon {
     padding-left: 10px;
 }
 
 /* ACTIVE ALARM */
-.activeAlarm{
+.activeAlarm {
     display: flex;
     padding: 10px;
     background-color: #8edafc;
@@ -101,34 +103,34 @@ img{
     min-height: 70px;
 }
 
-.alarm{
+.alarm {
     background-color: white;
     padding: 10px;
     border-radius: 50%;
 }
 
-.text{
+.text {
     padding-left: 20px;
 }
 
-.subText{
+.subText {
     text-decoration: underline;
 }
 
 /* SEARCH SECTION */
-.search{
+.search {
     padding: 10px;
     display: flex;
 }
 
-.iconMagnif{
+.iconMagnif {
     background-color: white;
     padding: 5px;
     padding-right: 10%;
     padding-left: 5%;
 }
 
-.inputSearch{
+.inputSearch {
     width: 85%;
     border: none;
     outline: none;
@@ -138,34 +140,34 @@ img{
 
 /* chatList */
 
-.chatList{
+.chatList {
     padding: 10px;
 }
 
-.chat{
+.chat {
     display: flex;
 }
 
-.itemChatAvatar{
+.itemChatAvatar {
     flex-basis: 20%;
     border-radius: 50%;
 }
 
-.itemChatAvatar img{
+.itemChatAvatar img {
     border-radius: 50%;
 }
 
-.itemChatText{
+.itemChatText {
     flex-basis: 60%;
     padding: 10px;
 }
 
-.itemChatData{
+.itemChatData {
     flex-basis: 20%;
     text-align: right;
 }
 
-.wrap{
+.wrap {
     height: 658px;
     overflow-y: auto;
 }
@@ -176,75 +178,86 @@ img{
     RIGHT SIDE */
 /* CONTACT CHAT */
 
-.contact{
+.contact {
     display: flex;
     padding: 7px;
     background-color: #eaeaea;
 }
 
-.contactAvatar{
+.contactAvatar {
     display: flex;
     align-items: center;
     flex-basis: 90%;
 }
 
-.infoContact{
+.infoContact {
     padding-left: 10px;
 }
 
-.image{
+.image {
     width: 50px;
 }
 
-.image img{
+.image img {
     border-radius: 50%;
 }
 
-.iconsContact{
+.iconsContact {
     display: flex;
     align-items: center;
 }
 
 
-.iconsContact .iconContact{
+.iconsContact .iconContact {
     padding-left: 10px;
 }
 
 /* SFONDO */
-.wallpaperChat{
+.wallpaperChat {
     height: 736px;
     background-image: url("../img/bg_chat.png");
     background-size: cover;
 }
 
-.textArea{
+.textArea {
     width: 70%;
     margin: 0 auto;
     padding-top: 20px;
     min-height: 100px;
 }
-.row{
+
+.row {
     width: 115%;
     margin: 10px 0;
 }
 
-.messUser{
+.time {
+    position: absolute;
+    font-size: 0.6rem;
+    bottom: 0;
+    right: 5px;
+    font-weight: lighter;
+}
+
+.messUser {
     background-color: #d5f9ba;
     width: 40%;
     min-height: 50px;
     border-radius: 10px;
     display: flex;
     align-items: center;
+    position: relative;
 
 }
 
-.messContact{
+.messContact {
     background-color: white;
     width: 40%;
     min-height: 50px;
     border-radius: 10px;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 
@@ -259,18 +272,18 @@ img{
     padding: 5px;
 }
 
-.emoteIcon{
+.emoteIcon {
     width: 10%;
     text-align: center;
 
 }
 
-.inputTextUser{
+.inputTextUser {
     width: 80%;
 
 }
 
-.inputTextUser input{
+.inputTextUser input {
     width: 100%;
     padding: 7px;
     border: none;
@@ -278,9 +291,7 @@ img{
     outline: none;
 }
 
-.microphoneIcon{
+.microphoneIcon {
     width: 10%;
     text-align: center;
 }
-
-

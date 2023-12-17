@@ -72,7 +72,7 @@
 
                 <div class="chatList wrap">
                     <ul>
-                        <li v-for="(contact, index) in contacts" :key="index" @click = "changeChat(index)">
+                        <li v-for="(contact, index) in contacts" :key="index" @click="changeChat(index)">
                             <div class="chat">
                                 <div class="itemChatAvatar">
                                     <img v-bind:src=contact.avatar alt="" srcset="">
@@ -96,10 +96,12 @@
                 <div class="contact">
                     <div class="contactAvatar">
                         <div class="image">
-                            <img src="img/avatar_1.jpg" alt="">
+                            <img :src=avatar alt="">
+                            <img src='img/avatar_1.jpg' alt="" v-if="!avatar">
                         </div>
                         <div class="infoContact">
-                            <div class="nameUser">Christian</div>
+                            <div class="nameUser" v-if="!name">Christian</div>
+                            <div class="nameUser">{{name}}</div>
                             <small>Ultimo accesso oggi alle 12:00</small>
                         </div>
                     </div>
@@ -119,18 +121,12 @@
                 <div class="wallpaperChat">
                     <div class="textArea">
 
-                        <!-- <div class="row">
-                            <div class="offset-6 messUser">
-                            </div>
-                        </div> -->
-                        <!-- <div class="row">
-                            <div class="messContact">
-                            </div>
-                        </div> -->
-
                         <div class="row" v-for="mess in arrayMess">
-                            <div  :class="mess.status === 'sent' ? 'offset-6 messUser' : 'messContact' ">
+                            <div :class="mess.status === 'sent' ? 'offset-6 messUser' : 'messContact' ">
                                 {{mess.message}}
+                                <div class="time">
+                                    {{date}}
+                                </div>
                             </div>
                         </div>
                     </div>

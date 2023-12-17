@@ -3,7 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            
+
             contacts: [
                 {
                     name: 'Michele',
@@ -168,23 +168,30 @@ createApp({
                 }
             ],
 
-            arrayMess : [],
-
+            arrayMess: [],
+            name: "",
+            avatar: "",
+            date: "",
         }
     },
 
-    methods:{
-        changeChat(i){
+    methods: {
+        changeChat(i) {
             let arrayTemp = [];
             let objTemp = this.contacts[i].messages;
-            for(let i = 0; i < objTemp.length; i++){
+            let objTempInfo = this.contacts[i];
+            for (let i = 0; i < objTemp.length; i++) {
                 let mess = objTemp[i];
                 arrayTemp.push(mess);
+                this.date = mess.date.substring(10);
             }
+
             this.arrayMess = arrayTemp;
-        }  
+            this.name = objTempInfo.name;
+            this.avatar = objTempInfo.avatar;
+        }
     },
-    
+
     mounted() {
         console.log("App Caricata!!");
         this.arrayMess = [];
