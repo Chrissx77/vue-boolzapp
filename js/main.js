@@ -173,6 +173,7 @@ createApp({
             name: "",
             avatar: "",
             chatText: "",
+            search:"",
         }
     },
 
@@ -209,12 +210,20 @@ createApp({
                 this.arrayMess.push({ date: time, message: 'Ok!', status: 'received' });
                 this.chatText = "";
             }, "1000");
+        },
+
+        removeMess(mess){
+            const index = this.arrayMess.indexOf(mess);
+            this.arrayMess.splice(index,1);
         }
+
+
+
+
     },
 
     mounted() {
         console.log("App Caricata!!");
-        this.arrayMess = [];
     }
 
 }).mount('#app')
