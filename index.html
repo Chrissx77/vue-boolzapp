@@ -86,10 +86,12 @@
                                     <div class="name">
                                         {{contact.name}}
                                     </div>
-                                    <small class="lastMess">Ultimo messaggio inviato</small>
+                                    <small class="lastMess">{{contact.messages[contact.messages.length - 1].message}}</small>
                                 </div>
                                 <div class="itemChatData">
-                                    <small class="data">12:00</small>
+                                    <small class="data">
+                                        {{contact.messages[contact.messages.length - 1].date}}
+                                    </small>
                                 </div>
                             </div>
                         </li>
