@@ -121,11 +121,11 @@
                 <div class="wallpaperChat">
                     <div class="textArea">
 
-                        <div class="row" v-for="mess in arrayMess">
+                        <div class="row" v-for="(mess, index) in arrayMess" :key="index">
                             <div :class="mess.status === 'sent' ? 'offset-6 messUser' : 'messContact' ">
                                 {{mess.message}}
                                 <div class="time">
-                                    {{date}}
+                                    {{arrayDate[index]}}
                                 </div>
                             </div>
                         </div>
@@ -136,7 +136,7 @@
                     <div class="emoteIcon">
                         <i class="fa-regular fa-face-smile fa-lg" style="color: #b1b1b1;"></i>
                     </div>
-                    <div class="inputTextUser"><input type="text" placeholder="Scrivi un messaggio"></div>
+                    <div class="inputTextUser"><input v-model="chatText" type="text" placeholder="Scrivi un messaggio" @keyup.enter = "addText()"></div>
                     <div class="microphoneIcon">
                         <i class="fa-solid fa-microphone fa-lg" style="color: #b1b1b1;"></i>
                     </div>

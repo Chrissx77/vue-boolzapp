@@ -169,26 +169,46 @@ createApp({
             ],
 
             arrayMess: [],
+            arrayDate: [],
             name: "",
             avatar: "",
-            date: "",
+            chatText: "",
         }
     },
 
     methods: {
         changeChat(i) {
-            let arrayTemp = [];
-            let objTemp = this.contacts[i].messages;
+            let arrayDateTemp = [];
+            let arrayMessTemp = [];
+            let objTempMess = this.contacts[i].messages;
             let objTempInfo = this.contacts[i];
-            for (let i = 0; i < objTemp.length; i++) {
-                let mess = objTemp[i];
-                arrayTemp.push(mess);
-                this.date = mess.date.substring(10);
+            for (let i = 0; i < objTempMess.length; i++) {
+                let mess = objTempMess[i];
+                arrayMessTemp.push(mess);
+                arrayDateTemp.push(mess.date.substring(10));
             }
-
-            this.arrayMess = arrayTemp;
+            this.arrayDate = arrayDateTemp;
+            this.arrayMess = arrayMessTemp;
             this.name = objTempInfo.name;
             this.avatar = objTempInfo.avatar;
+        },
+
+        addText() {
+            var data = new Date();
+            let time = data.getHours() + ":";
+            time += data.getMinutes() + ":";
+            time += data.getSeconds();
+            this.arrayDate.push(time);
+            this.arrayMess.push({ date: time, message: this.chatText, status: 'sent' });
+            this.chatText = "";
+            setTimeout(() => {
+                let time = data.getHours() + ":";
+                time += data.getMinutes() + ":";
+                time += data.getSeconds();
+                this.arrayDate.push(time);
+                this.arrayMess.push({ date: time, message: 'Ok!', status: 'received' });
+                this.chatText = "";
+            }, "1000");
         }
     },
 
