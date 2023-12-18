@@ -77,7 +77,7 @@
                 <div class="chatList wrap">
                     <ul>
                         <li v-for="(contact, index) in contacts" :key="index" @click="changeChat(index)"
-                            v-show="contact.name.includes(search)">
+                            v-show="contact.name.includes(search)" :class="contact.visible ? 'active' : ''">
                             <div class="chat">
                                 <div class="itemChatAvatar">
                                     <img v-bind:src=contact.avatar alt="" srcset="">
@@ -86,7 +86,8 @@
                                     <div class="name">
                                         {{contact.name}}
                                     </div>
-                                    <small class="lastMess">{{contact.messages[contact.messages.length - 1].message}}</small>
+                                    <small class="lastMess">{{contact.messages[contact.messages.length -
+                                        1].message}}</small>
                                 </div>
                                 <div class="itemChatData">
                                     <small class="data">
@@ -134,12 +135,13 @@
 
                                 <div class="arrowInfo">
                                     <div class="btn-group">
-                                        <button type="button" class="btn dropdown-toggle"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
                                         </button>
                                         <ul class="dropdown-menu dropdown-menu-end">
                                             <li><button class="dropdown-item" type="button">Message info</button></li>
-                                            <li><button class="dropdown-item" type="button" @click="removeMess(index)">Delete message</button></li>
+                                            <li><button class="dropdown-item" type="button"
+                                                    @click="removeMess(index)">Delete message</button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -165,11 +167,6 @@
             </div>
 
         </div>
-    </div>
-
-
-
-
     </div>
 
     <script src="js/main.js"></script>

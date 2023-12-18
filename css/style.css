@@ -15,11 +15,11 @@ ul {
 
 li {
     cursor: pointer;
-    border-top:1px solid #dedede ;
+    border-top: 1px solid #dedede;
     padding: 10px;
 }
 
-li:hover{
+.active {
     background-color: #b1b1b1;
 }
 
@@ -142,13 +142,6 @@ img {
 
 }
 
-
-/* chatList */
-
-.chatList {
-    /* padding: 10px; */
-}
-
 .chat {
     display: flex;
 }
@@ -254,7 +247,7 @@ img {
     cursor: pointer;
 }
 
-.dropdown-toggle{
+.dropdown-toggle {
     border: none;
 }
 
@@ -281,8 +274,6 @@ img {
 
 
 /* textBar */
-
-
 .textBar {
     min-height: 50px;
     background-color: #f3eeea;
