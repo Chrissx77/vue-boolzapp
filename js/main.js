@@ -173,7 +173,7 @@ createApp({
             name: "",
             avatar: "",
             chatText: "",
-            search:"",
+            search: "",
         }
     },
 
@@ -200,20 +200,24 @@ createApp({
             time += data.getMinutes() + ":";
             time += data.getSeconds();
             this.arrayDate.push(time);
-            this.arrayMess.push({ date: time, message: this.chatText, status: 'sent' });
-            this.chatText = "";
-            setTimeout(() => {
-                let time = data.getHours() + ":";
-                time += data.getMinutes() + ":";
-                time += data.getSeconds();
-                this.arrayDate.push(time);
-                this.arrayMess.push({ date: time, message: 'Ok!', status: 'received' });
+            console.log(this.chatText);
+            console.log("Sono dentro!");
+            if(this.chatText.trim() !== ""){
+                this.arrayMess.push({ date: time, message: this.chatText, status: 'sent' });
                 this.chatText = "";
-            }, "1000");
+                setTimeout(() => {
+                    let time = data.getHours() + ":";
+                    time += data.getMinutes() + ":";
+                    time += data.getSeconds();
+                    this.arrayDate.push(time);
+                    this.arrayMess.push({ date: time, message: 'Ok!', status: 'received' });
+                    this.chatText = "";
+                }, "1000");
+            }
         },
 
-        removeMess(i){
-            this.arrayMess.splice(i,1);
+        removeMess(i) {
+            this.arrayMess.splice(i, 1);
         }
 
 
